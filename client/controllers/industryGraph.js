@@ -50,11 +50,16 @@ Template.industryGraph.rendered = function () {
                 x: 'x',
                 columns: columns
             },
-            axis : {
-                x : {
-                    type : 'timeseries',
+            axis: {
+                y: {
+                    label: 'Persons (x 1000)'
+                },
+                x: {
+                    label: 'Time',
+                    type: 'timeseries',
                     tick: {
-                        format: function (x) { return (x.getMonth()+1) + '/' + x.getFullYear(); }
+                        count: 12,
+                        format: function (x) { return (x.getMonth()+1) + '/' + x.getYear(); }
                         //format: '%Y' // format string is also available for timeseries data
                     }
                 }
