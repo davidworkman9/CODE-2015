@@ -3,6 +3,15 @@
         {{> ionNavBar class="bar-positive"}}
         {{#ionNavView}}
             {{>yield}}
+            {{#if isAndroid}}
+                {{#ionTabs style="android" class="tabs-background-positive tabs-color-light"}}
+                    {{> ionTab title="Home" path="home" icon="android-home"}}
+                {{/ionTabs}}
+            {{else}}
+                {{#ionTabs style="ios"}}
+                    {{> ionTab title="Home" path="home" iconOff="ios-home-outline" iconOn="ios-home"}}
+                {{/ionTabs}}
+            {{/if}}
         {{/ionNavView}}
     {{/ionBody}}
 </template>

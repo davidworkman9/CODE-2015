@@ -1,0 +1,14 @@
+<template name="home">
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Job Nation</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <div class="padding">
+                <p>Helping youth make tough job decisions with cold hard open fresh straight from the government data.</p>
+                <a href="{{pathFor 'industrySelector'}}" class="button">Get Started Now!</a>
+            </div>
+        {{/ionContent}}
+    {{/ionView}}
+</template>

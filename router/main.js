@@ -2,6 +2,12 @@ Router.configure({
     layoutTemplate: 'layout'
 });
 
+
+Router.route('/', {
+    template: 'home',
+    name: 'home'
+});
+
 Router.route('/industry-selector', {
     template: 'industrySelector',
     name: 'industrySelector'
