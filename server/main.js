@@ -8,14 +8,15 @@
 //});
 
 Meteor.startup(function () {
+    if (LabourForceSurveyEstimates.find().count() > 0)
+        return;
     var Future = Npm.require('fibers/future'),
         fut = new Future(),
         csv = Meteor.npmRequire('csv'),
-        txt = Assets.getText('wages salary stuff.csv');
+        txt = Assets.getText('Labour force survey estimates.csv');
 
     csv.parse(txt, function (err, data) {
         var headers = data.shift();
-        console.log(headers);
         data = _.map(data, function (value) {
             var obj = {},
                 i = 0;
@@ -30,7 +31,13 @@ Meteor.startup(function () {
 
     var data = fut.wait();
     _.each(data, function (d) {
-        Data03820006.insert(d);
-    });
+        d.NORTH = d.NORTH.replace(/\(x 1,000\)$/, '').trim();
+        var datePieces = d.Ref_Date.split('/');
+        d.Ref_Date = new Date(datePieces[0], datePieces[1], 1);
+        LabourForceSurveyEstimates.insert(d);
 
+        if (!Industries.findOne({ industry: d.NORTH }))
+            Industries.insert({ industry: d.NORTH });
+    });
+    console.log('done parsing data');
 });

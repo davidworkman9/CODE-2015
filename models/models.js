@@ -1,1 +1,3 @@
-Data03820006 = new Meteor.Collection('Data03820006');
+LabourForceSurveyEstimates = new Meteor.Collection('LabourForceSurveyEstimates');
+
+Industries = new Meteor.Collection('Industries');
