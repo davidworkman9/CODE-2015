@@ -5,11 +5,16 @@ Template.main.created = function () {
 };
 
 Template.main.rendered = function () {
+    var shown = false;
     this.autorun(function () {
         if (this.subIndustries.ready()) {
             IonLoading.hide();
+            shown = false;
         } else {
-            IonLoading.show();
+            if (!shown) {
+                IonLoading.show();
+                shown = true;
+            }
         }
     }.bind(this));
 };

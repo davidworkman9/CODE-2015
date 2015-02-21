@@ -14,17 +14,23 @@ Template.industryGraph.helpers({
 });
 
 Template.industryGraph.rendered = function () {
+    var shown = false;
     this.autorun(function () {
         if (this.subIndustries.ready() && this.subData.ready()) {
             IonLoading.hide();
+            shown = false;
         } else {
-            IonLoading.show();
+            if (!shown) {
+                IonLoading.show();
+                shown = true;
+            }
         }
     }.bind(this));
 
     this.autorun(function () {
         var data = Blaze.getData();
         var industry = Router.current().params.industry;
+console.log('in here');
         if (!(this.subIndustries.ready() && this.subData.ready()))
             return;
 
