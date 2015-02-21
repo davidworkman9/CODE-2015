@@ -8,8 +8,8 @@ Meteor.publish('industry-data', function (industry) {
     return LabourForceSurveyEstimates.find({
         NORTH_lc: industry.toLowerCase(),
         Ref_Date: {
-            $lte: new Date(2012, 6, 1),
-            $gt: new Date(2012, 1, 1)
+            $lte: new Date(2012, 1, 1),
+            $gt: new Date(2009, 1, 1)
         }
     });
 });
