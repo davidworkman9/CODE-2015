@@ -8,3 +8,6 @@ meteor-platform
 autopublish
 insecure
 meteoric:ionic
+iron:router
+accounts-facebook
+accounts-entry
