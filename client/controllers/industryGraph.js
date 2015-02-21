@@ -34,9 +34,9 @@ Template.industryGraph.rendered = function () {
             return;
 
         var columns = [
-            ['x'].concat(_.map(data.fetch(), function (x) {
+            ['x'].concat(_.uniq(_.map(data.fetch(), function (x) {
                 return x.Ref_Date;
-            }))
+            }), function (x) { return x.getTime(); }))
         ];
         var forces = _.pluck(data.fetch(), 'FORCE');
         forces = _.uniq(forces);
@@ -45,7 +45,8 @@ Template.industryGraph.rendered = function () {
                 FORCE: x
             }).fetch(), function (x) { return x.Value; })));
         });
-        var chart = c3.generate({
+
+        c3.generate({
             data: {
                 x: 'x',
                 columns: columns
@@ -59,10 +60,13 @@ Template.industryGraph.rendered = function () {
                     type: 'timeseries',
                     tick: {
                         count: 12,
-                        format: function (x) { return (x.getMonth()+1) + '/' + x.getYear(); }
+                        format: function (x) { return (x.getMonth()+1) + '/' + x.getFullYear().toString().substring(2); }
                         //format: '%Y' // format string is also available for timeseries data
                     }
                 }
+            },
+            subchart: {
+                show: true
             }
         });
     }.bind(this));

@@ -7,6 +7,37 @@
 //    request(url).pipe(fs.createWriteStream('../../../../../index.js-junk'));
 //});
 
+
+//Meteor.startup(function () {
+//    //SalaryInfo.remove();
+//    if (SalaryInfo.find().count > 0)
+//        return;
+//    var Future = Npm.require('fibers/future'),
+//        fut = new Future(),
+//        csv = Meteor.npmRequire('csv'),
+//        txt = Assets.getText('03820006-eng.csv');
+//
+//    csv.parse(txt, function (err, data) {
+//        var headers = data.shift();
+//        fut.return({ headers: headers, data: data });
+//    });
+//
+//    var d = fut.wait();
+//    console.time('processing time');
+//    _.each(d.data, function (value) {
+//        var obj = {};
+//        var i = 0;
+//        _.each(d.headers, function (h) {
+//            obj[h] = value[i];
+//            ++i;
+//        });
+//        SalaryInfo.insert(obj);
+//        process.stdout.write('.');
+//    });
+//    console.timeEnd('processing time');
+//});
+
+
 Meteor.startup(function () {
     //LabourForceSurveyEstimates.remove({});
     //Industries.remove({});
