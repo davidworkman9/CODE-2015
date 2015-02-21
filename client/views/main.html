@@ -2,34 +2,11 @@
     <a href="/sign-in">Sign In</a>
     <a href="/sign-up">Sign Up</a>
     <br/>
-    <br/>
-    <br/>
-    <br/>
-    <a href="http://192.168.1.111:3000/industry-graph/Goods-producing%20sector" style="height:500px;">gotodata</a>
-    <table>
-        <thead>
-        <tr>
-            <th>Ref_Date</th>
-            <th>GEO</th>
-            <th>FORCE</th>
-            <th>NORTH</th>
-            <th>Vector</th>
-            <th>Coordinate</th>
-            <th>Value</th>
-        </tr>
-        </thead>
-        <tbody>
-        {{#each rows}}
-        <tr>
-            <td>{{Ref_Date}}</td>
-            <td>{{GEO}}</td>
-            <td>{{FORCE}}</td>
-            <td>{{NORTH}}</td>
-            <td>{{Vector}}</td>
-            <td>{{Coordinate}}</td>
-            <td>{{Value}}</td>
-        </tr>
-        {{/each}}
-        </tbody>
-    </table>
+    <div>
+        <select name="industry" id="industry">
+            {{#each industries}}
+                <option value="{{industry}}">{{industry}}</option>
+            {{/each}}
+        </select>
+    </div>
 </template>

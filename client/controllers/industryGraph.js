@@ -3,7 +3,6 @@ Template.industryGraph.helpers({
 });
 
 Template.industryGraph.rendered = function () {
-    console.log(this.data.fetch());
     var industry = Router.current().params.industry;
     var columns = [
         ['x'].concat(_.map(this.data.fetch(), function (x) {
