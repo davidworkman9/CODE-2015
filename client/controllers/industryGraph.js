@@ -30,7 +30,6 @@ Template.industryGraph.rendered = function () {
     this.autorun(function () {
         var data = Blaze.getData();
         var industry = Router.current().params.industry;
-console.log('in here');
         if (!(this.subIndustries.ready() && this.subData.ready()))
             return;
 
