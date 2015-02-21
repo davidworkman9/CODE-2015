@@ -11,3 +11,8 @@ meteoric:ionic
 iron:router
 accounts-facebook
 accounts-entry
+http
+meteorhacks:npm
+
+
+npm-container
