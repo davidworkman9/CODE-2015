@@ -6,6 +6,10 @@
     {{#ionView}}
         {{#ionContent}}
             {{#ionList}}
+                {{#ionItem class="item-icon-right"}}
+                    <input type="search" placeholder="Search..." id="industry-filter">
+                    {{> ionIcon icon="search" class="positive"}}
+                {{/ionItem}}
                 {{#each industries}}
                     {{#ionItem path="industryGraph" buttonRight=true avatar=true class="item-icon-right"}}
                         {{industry}}

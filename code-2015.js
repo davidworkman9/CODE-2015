@@ -5,3 +5,5 @@ if (Meteor.isClient) {
         }
     });
 }
+
+escapeRegExp = function (e){"use strict";var t=new RegExp("(\\"+["/",".","*","+","?","|","(",")","[","]","{","}","^","\\","$"].join("|\\")+")","g");return e.replace(t,"\\$1")}
