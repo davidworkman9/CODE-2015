@@ -12,6 +12,6 @@ Router.route('/industry-graph/:industry', {
         ];
     },
     data: function () {
-        return LabourForceSurveyEstimates.find({ NORTH: this.params.industry });
+        return LabourForceSurveyEstimates.find({ NORTH_lc: this.params.industry.toLowerCase() });
     }
 });

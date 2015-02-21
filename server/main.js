@@ -8,6 +8,8 @@
 //});
 
 Meteor.startup(function () {
+    LabourForceSurveyEstimates.remove({});
+    Industries.remove({});
     if (LabourForceSurveyEstimates.find().count() > 0)
         return;
     var Future = Npm.require('fibers/future'),
@@ -34,6 +36,7 @@ Meteor.startup(function () {
         d.NORTH = d.NORTH.replace(/\(x 1,000\)$/, '').trim();
         var datePieces = d.Ref_Date.split('/');
         d.Ref_Date = new Date(datePieces[0], datePieces[1], 1);
+        d.NORTH_lc = d.NORTH.toLowerCase();
         LabourForceSurveyEstimates.insert(d);
 
         if (!Industries.findOne({ industry: d.NORTH }))
