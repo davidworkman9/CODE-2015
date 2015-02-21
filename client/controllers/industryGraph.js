@@ -1,14 +1,16 @@
 Template.industryGraph.created = function () {
     this.autorun(function () {
         this.subIndustries = Meteor.subscribe('industries');
-        this.subData = Meteor.subscribe('industry-data', Router.current().params.industry);
+        this.subData = Meteor.subscribe('industry-data', Router.current().params.parentId);
     }.bind(this));
 };
 
 Template.industryGraph.helpers({
     industry : function () {
-        var ind = Router.current().params.industry;
-        var doc = LabourForceSurveyEstimates.findOne({NORTH_lc: ind});
+        var ind = Router.current().params.parentId;
+        if (!ind)
+            return;
+        var doc = LabourForceSurveyEstimates.findOne({NORTH_lc: ind.toLowerCase()});
         return doc && doc.NORTH;
     }
 });
@@ -29,7 +31,7 @@ Template.industryGraph.rendered = function () {
 
     this.autorun(function () {
         var data = Blaze.getData();
-        var industry = Router.current().params.industry;
+        var industry = Router.current().params.parentId;
         if (!(this.subIndustries.ready() && this.subData.ready()))
             return;
 

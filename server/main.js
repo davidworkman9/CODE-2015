@@ -39,8 +39,8 @@
 
 
 Meteor.startup(function () {
-    //LabourForceSurveyEstimates.remove({});
-    //Industries.remove({});
+    // LabourForceSurveyEstimates.remove({});
+    // Industries.remove({});
     if (LabourForceSurveyEstimates.find().count() > 0)
         return;
     var Future = Npm.require('fibers/future'),
@@ -69,9 +69,33 @@ Meteor.startup(function () {
         d.Ref_Date = new Date(datePieces[0], datePieces[1], 1);
         d.NORTH_lc = d.NORTH.toLowerCase();
         LabourForceSurveyEstimates.insert(d);
-
-        if (!Industries.findOne({ industry: d.NORTH }))
-            Industries.insert({ industry: d.NORTH });
     });
+
+    var fut = new Future(),
+        txt = Assets.getText('sectors.csv');
+
+    csv.parse(txt, function (err, data) {
+       var headers = data.shift();
+       fut.return({ headers: headers, data: data });
+    });
+
+    var d = fut.wait();
+    var parentId;
+    console.time('processing time');
+    _.each(d.data, function (value) {
+       var obj = {};
+       var i = 0;
+       _.each(d.headers, function (h) {
+           obj[h] = value[i];
+           ++i;
+       });
+       if (!Industries.findOne({industry: obj.industry})){
+            Industries.insert({industry: obj.industry, parentId: obj.industry});
+            parentId = obj.industry
+        }
+        Industries.insert({industry: obj.sector, parentId: parentId });
+    });
+
     console.log('done parsing data');
 });
+

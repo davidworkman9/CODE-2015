@@ -13,7 +13,7 @@ Router.route('/industry-selector', {
     name: 'industrySelector'
 });
 
-Router.route('/industry-graph/:industry', {
+Router.route('/industry-graph/:parentId', {
     template: 'industryGraph',
     name: 'industryGraph',
     //waitOn: function () {
@@ -23,6 +23,6 @@ Router.route('/industry-graph/:industry', {
     //    ];
     //},
     data: function () {
-        return LabourForceSurveyEstimates.find({ NORTH_lc: this.params.industry.toLowerCase() });
+        return LabourForceSurveyEstimates.find({ NORTH_lc: this.params.parentId.toLowerCase() });
     }
 });
