@@ -4,12 +4,7 @@ Router.configure({
 
 Router.route('/', {
     template: 'main',
-    name: 'main',
-    data: function () {
-        return {
-            industries: Industries.find()
-        };
-    }
+    name: 'main'
 });
 
 Router.route('/industry-graph/:industry', {

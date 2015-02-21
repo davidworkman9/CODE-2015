@@ -20,7 +20,7 @@ email@1.0.5
 facebook@1.1.3
 fastclick@1.0.2
 follower-livedata@1.0.3
-fourseven:scss@2.0.0
+fourseven:scss@2.0.0_1
 geojson-utils@1.0.2
 handlebars@1.0.2
 html-tools@1.0.3
@@ -86,3 +86,4 @@ underscore@1.0.2
 url@1.0.3
 webapp@1.1.6
 webapp-hashing@1.0.2
+workman:templating-ext@0.0.2
