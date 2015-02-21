@@ -2,9 +2,9 @@ Router.configure({
     layoutTemplate: 'layout'
 });
 
-Router.route('/', {
-    template: 'main',
-    name: 'main'
+Router.route('/industry-selector', {
+    template: 'industrySelector',
+    name: 'industrySelector'
 });
 
 Router.route('/industry-graph/:industry', {
