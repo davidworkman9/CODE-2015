@@ -1,6 +1,16 @@
 <template name="industryGraph">
-    <h1>{{industry}}</h1>
-    <p>The following graph shows employment rates in the industry.</p>
-    <a href="{{pathFor 'main'}}">Go Home</a>
-    <div id="chart"></div>
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">{{industry}}</h1>
+    {{/contentFor}}
+
+    {{#contentFor "headerButtonLeft"}}
+        <a class="button button-clear" href="{{pathFor 'main'}}">{{> ionIcon icon="ios-arrow-left"}}</a>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <p>The following graph shows employment rates in the industry.</p>
+            <div id="chart"></div>
+        {{/ionContent}}
+    {{/ionView}}
 </template>

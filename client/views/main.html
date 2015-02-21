@@ -1,12 +1,18 @@
 <template name="main">
-    <a href="/sign-in">Sign In</a>
-    <a href="/sign-up">Sign Up</a>
-    <br/>
-    <div>
-        <select name="industry" id="industry">
-            {{#each industries}}
-                <option value="{{industry}}">{{industry}}</option>
-            {{/each}}
-        </select>
-    </div>
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Pick An Industry</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            {{#ionList}}
+                {{#each industries}}
+                    {{#ionItem path="industryGraph" buttonRight=true avatar=true class="item-icon-right"}}
+                        {{industry}}
+                        {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+                    {{/ionItem}}
+                {{/each}}
+            {{/ionList}}
+        {{/ionContent}}
+    {{/ionView}}
 </template>

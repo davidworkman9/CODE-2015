@@ -1,3 +1,7 @@
+Router.configure({
+    layoutTemplate: 'layout'
+});
+
 Router.route('/', {
     template: 'main',
     name: 'main',

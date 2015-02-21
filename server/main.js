@@ -8,8 +8,8 @@
 //});
 
 Meteor.startup(function () {
-    LabourForceSurveyEstimates.remove({});
-    Industries.remove({});
+    //LabourForceSurveyEstimates.remove({});
+    //Industries.remove({});
     if (LabourForceSurveyEstimates.find().count() > 0)
         return;
     var Future = Npm.require('fibers/future'),
