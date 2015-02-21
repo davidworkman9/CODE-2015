@@ -1,3 +1,7 @@
+Template.industryGraph.helpers({
+    industry : function() { return LabourForceSurveyEstimates.findOne().NORTH; }
+});
+
 Template.industryGraph.rendered = function () {
     console.log(this.data.fetch());
     var industry = Router.current().params.industry;
