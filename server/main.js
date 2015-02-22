@@ -39,12 +39,15 @@
 
 
 Meteor.startup(function () {
-    // ActualHoursWorked.remove({});
     // TenureByIndustry.remove({});
+    // ActualHoursWorked.remove({});
     // LabourForceSurveyEstimates.remove({});
     // Industries.remove({});
     if (LabourForceSurveyEstimates.find().count() > 0)
         return;
+
+    console.log('Starting Data Parse');
+
     var Future = Npm.require('fibers/future'),
         fut = new Future(),
         csv = Meteor.npmRequire('csv'),
@@ -123,7 +126,7 @@ Meteor.startup(function () {
     //     TenureByIndustry.insert(obj);
     // });
 
-    console.log('done parsing data');
+    console.log('Done Parsing Data');
 
     console.log('Beginning Data Calculations');
     var fut = new Future(),
@@ -148,10 +151,12 @@ Meteor.startup(function () {
         var datePieces = obj.Ref_Date.split('/');
         obj.Ref_Date = new Date(datePieces[0], datePieces[1], 1);
 
-        lfse = LabourForceSurveyEstimates.findOne({NORTH: obj.NAICS, Ref_Date: obj.Ref_Date})
-        if (lfse) {
-            ActualHoursWorked.insert({industry: obj.NAICS, industry_lc: obj.NAICS.toLowerCase(), Ref_Date: obj.Ref_Date, averageHours: (Number(obj.Value) / Number(lfse.Value)) });
-        }
+        lfse_labour_force = LabourForceSurveyEstimates.findOne({NORTH: obj.NAICS, Ref_Date: obj.Ref_Date, FORCE: 'Labour force' })
+        lfse_employment = LabourForceSurveyEstimates.findOne({NORTH: obj.NAICS, Ref_Date: obj.Ref_Date, FORCE: 'Employment' })
+        if (lfse_labour_force)
+            ActualHoursWorked.insert({industry: obj.NAICS, industry_lc: obj.NAICS.toLowerCase(), Ref_Date: obj.Ref_Date, averageHours: (Number(obj.Value) / Number(lfse_labour_force.Value)), FORCE: 'Labour force' });
+        if (lfse_employment)
+            ActualHoursWorked.insert({industry: obj.NAICS, industry_lc: obj.NAICS.toLowerCase(), Ref_Date: obj.Ref_Date, averageHours: (Number(obj.Value) / Number(lfse_employment.Value)), FORCE: 'Employment' });
     });
     console.log('Finished Data Calculations');
 });

@@ -30,9 +30,9 @@ Template.industryGraph.rendered = function () {
     }.bind(this));
 
     this.autorun(function () {
-        var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-        var data = Blaze.getData().lfd;
-        var industry = Router.current().params.parentId;
+        var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+            data = Blaze.getData().lfd,
+            industry = Router.current().params.parentId;
         if (!(this.subIndustries.ready() && this.subData.ready()))
             return;
 
@@ -49,10 +49,10 @@ Template.industryGraph.rendered = function () {
             }).fetch(), function (x) { return x.Value; })));
         });
 
-        c3.generate({
+        chart = c3.generate({
             data: {
                 x: 'x',
-                columns: columns
+                columns: [columns[0], columns[1], columns[2]]
             },
             axis: {
                 y: {
@@ -75,6 +75,37 @@ Template.industryGraph.rendered = function () {
                 enabled: true
             }
         });
+        chart.transform("spline");
+
+
+        chart = c3.generate({
+            bindto: '#chart2',
+            data: {
+                x: 'x',
+                columns: [columns[0], columns[3], columns[4]]
+            },
+            axis: {
+                y: {
+                    label: 'Persons (x 1000)'
+                },
+                x: {
+                    label: 'Time',
+                    type: 'timeseries',
+                    tick: {
+                        count: 12,
+                        format: function (x) { return monthNames[x.getMonth()] + '-' + x.getFullYear().toString().substring(2); }
+                        //format: '%Y' // format string is also available for timeseries data
+                    }
+                }
+            },
+            subchart: {
+                show: true
+            },
+            zoom: {
+                enabled: true
+            }
+        });
+        chart.transform("spline");
 
         var data = Blaze.getData().ahw;
         if (!(this.subIndustries.ready() && this.subData.ready()))
@@ -86,10 +117,16 @@ Template.industryGraph.rendered = function () {
             }), function (x) { return x.getTime(); }))
         ];
         
-        columns.push(['Data'].concat(_.map(data.fetch(), function (x) { return x.averageHours; })));
+        var forces = _.pluck(data.fetch(), 'FORCE');
+        forces = _.uniq(forces);
+        _.each(forces, function (x) {
+            columns.push([x].concat(_.map(ActualHoursWorked.find({
+                FORCE: x
+            }).fetch(), function (x) { return x.averageHours; })));
+        });
 
-        c3.generate({
-            bindto: '#chart2',
+        chart = c3.generate({
+            bindto: '#chart3',
             data: {
                 x: 'x',
                 columns: columns
@@ -115,5 +152,6 @@ Template.industryGraph.rendered = function () {
                 enabled: true
             }
         });
+        chart.transform("spline");
     }.bind(this));
 };

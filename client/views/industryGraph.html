@@ -2,6 +2,9 @@
     {{#contentFor "headerTitle"}}
         <h1 class="title">{{industry}}</h1>
     {{/contentFor}}
+    {{#ionSubheaderBar}}
+      <h3>Use the following to explore your chosen industry!</h3>
+    {{/ionSubheaderBar}}
 
     {{#contentFor "headerButtonLeft"}}
         <a class="button button-clear" href="{{pathFor 'industrySelector'}}">{{> ionIcon icon="ios-arrow-left"}}</a>
@@ -10,11 +13,12 @@
     {{#ionView}}
         {{#ionContent}}
             <div class="padding">
-                <p>The following graph shows employment rates in the industry.</p>
+                <p><strong>The following graph shows employment rates in the industry.</strong></p>
                 <div id="chart"></div>
-                <p>The following graph shows average work hours/week for the employee in the industry.</p>
+                <p><strong>The following graph shows unemployment rates in the industry.</strong></p>
                 <div id="chart2"></div>
-
+                <p><strong>The following graph shows average work hours/week for the employee in the industry.</strong></p>
+                <div id="chart3"></div>
             </div>
         {{/ionContent}}
     {{/ionView}}
