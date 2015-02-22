@@ -1,5 +1,14 @@
-Meteor.publish('industries', function () {
-    return Industries.find();
+Meteor.publish('industries', function (skip, limit, filter) {
+    var opts = {
+        sort: { industry: 1 }
+    };
+    if (skip)
+        opts.skip = skip;
+    if (limit)
+        opts.limit = limit;
+    if (!filter)
+        return Industries.find({}, opts);
+    return Industries.find({industry: new RegExp(escapeRegExp(filter), 'i')}, opts);
 });
 
 
