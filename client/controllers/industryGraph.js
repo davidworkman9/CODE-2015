@@ -6,12 +6,18 @@ Template.industryGraph.created = function () {
 };
 
 Template.industryGraph.helpers({
-    industry : function () {
+    lfseIndustry : function () {
         var ind = Router.current().params.parentId;
         if (!ind)
             return;
         var doc = LabourForceSurveyEstimates.findOne({NORTH_lc: ind.toLowerCase()});
         return doc && doc.NORTH;
+    },
+    industry : function () {
+        var ind = Router.current().params.parentId;
+        if (!ind)
+            return;
+        return Industries.findOne({industry: ind});
     }
 });
 
@@ -174,7 +180,7 @@ Template.industryGraph.rendered = function () {
         ];
         
         columns.push(['Data'].concat(_.map(data.fetch(), function (x) { return (Number(x.Value) / 12 );  })));
-        console.log(columns);
+
         chart = c3.generate({
             bindto: '#chart4',
             data: {

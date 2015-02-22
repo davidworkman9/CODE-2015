@@ -1,6 +1,6 @@
 <template name="industryGraph">
     {{#contentFor "headerTitle"}}
-        <h1 class="title">{{industry}}</h1>
+        <h1 class="title">{{lfseIndustry}}</h1>
     {{/contentFor}}
 
     {{#unless isAndroid}}
@@ -15,7 +15,7 @@
                 <div class="owl-carousel">
                     <div>
                         <div class="disable-owl-swipe">
-                            <p><strong>Employment rates for {{industry}}.</strong></p>
+                            <p><strong>Employment rates for {{lfseIndustry}}.</strong></p>
                             <div id="chart"></div>
                         </div>
                         <div class="padding-vertical">
@@ -27,7 +27,7 @@
                     </div>
                     <div>
                         <div class="disable-owl-swipe">
-                            <p><strong>Unemployment rates for {{industry}}.</strong></p>
+                            <p><strong>Unemployment rates for {{lfseIndustry}}.</strong></p>
                             <div id="chart2"></div>
                         </div>
                         <div class="padding-vertical">
@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <div class="disable-owl-swipe">
-                            <p><strong>Average work hours per week for am employee in {{industry}}.</strong></p>
+                            <p><strong>Average work hours per week for am employee in {{lfseIndustry}}.</strong></p>
                             <div id="chart3"></div>
                         </div>
                         <div class="padding-vertical">
@@ -53,13 +53,41 @@
                     </div>
                     <div>
                         <div class="disable-owl-swipe">
-                            <p><strong>Average tenure in years at a job in {{industry}}.</strong></p>
+                            <p><strong>Average tenure in years at a job in {{lfseIndustry}}.</strong></p>
                             <div id="chart4"></div>
                         </div>
-                        <button class="button button-clear button-full">
-                            {{> ionIcon icon="chevron-left" class="pull-left padding-left"}}
-                            Swipe Here
-                        </button>
+                        <div class="padding-vertical">
+                            <button class="button button-clear button-full">
+                                {{> ionIcon icon="chevron-left" class="pull-left padding-left"}}
+                                Swipe Here
+                                {{> ionIcon icon="chevron-right" class="pull-right padding-right"}}
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="disable-owl-swipe">
+                            <p><strong>If you would like to find more information on {{lfseIndustry}}, please use the following link(s).</strong></p>
+                            <div>
+                              {{#ionList}}
+                                  {{#ionItem href=industry.link1 buttonRight=true avatar=true class="item-icon-right"}}
+                                      {{industry.link1}}
+                                      {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+                                  {{/ionItem}}
+                                  {{#if industry.link2}}
+                                      {{#ionItem href=industry.link2 buttonRight=true avatar=true class="item-icon-right"}}
+                                          {{industry.link2}}
+                                          {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+                                      {{/ionItem}}
+                                  {{/if}}
+                              {{/ionList}}
+                            </div>
+                        </div>
+                        <div class="padding-vertical">
+                            <button class="button button-clear button-full">
+                                {{> ionIcon icon="chevron-left" class="pull-left padding-left"}}
+                                Swipe Here
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
