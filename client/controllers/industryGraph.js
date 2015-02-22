@@ -24,7 +24,7 @@ Template.industryGraph.helpers({
 Template.industryGraph.rendered = function () {
     var shown = false;
 
-    this.$('.owl-carousel').owlCarousel({
+    this.owl = this.$('.owl-carousel').owlCarousel({
         singleItem: true
     });
     this.$(".disable-owl-swipe").on("touchstart mousedown", function(e) {
@@ -180,7 +180,6 @@ Template.industryGraph.rendered = function () {
         ];
         
         columns.push(['Data'].concat(_.map(data.fetch(), function (x) { return (Number(x.Value) / 12 );  })));
-
         chart = c3.generate({
             bindto: '#chart4',
             data: {
