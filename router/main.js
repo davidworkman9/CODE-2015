@@ -23,6 +23,6 @@ Router.route('/industry-graph/:parentId', {
     //    ];
     //},
     data: function () {
-        return LabourForceSurveyEstimates.find({ NORTH_lc: this.params.parentId.toLowerCase() });
+        return { lfd: LabourForceSurveyEstimates.find({ NORTH_lc: this.params.parentId.toLowerCase() }), ahw: ActualHoursWorked.find({ industry_lc: this.params.parentId.toLowerCase() }) };
     }
 });

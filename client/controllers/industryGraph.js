@@ -30,7 +30,7 @@ Template.industryGraph.rendered = function () {
     }.bind(this));
 
     this.autorun(function () {
-        var data = Blaze.getData();
+        var data = Blaze.getData().lfd;
         var industry = Router.current().params.parentId;
         if (!(this.subIndustries.ready() && this.subData.ready()))
             return;
@@ -69,6 +69,49 @@ Template.industryGraph.rendered = function () {
             },
             subchart: {
                 show: true
+            },
+            zoom: {
+                enabled: true
+            }
+        });
+
+        var data = Blaze.getData().ahw;
+        if (!(this.subIndustries.ready() && this.subData.ready()))
+            return;
+
+        var columns = [
+            ['x'].concat(_.uniq(_.map(data.fetch(), function (x) {
+                return x.Ref_Date;
+            }), function (x) { return x.getTime(); }))
+        ];
+        
+        columns.push(['Data'].concat(_.map(data.fetch(), function (x) { return x.averageHours; })));
+
+        c3.generate({
+            bindto: '#chart2',
+            data: {
+                x: 'x',
+                columns: columns
+            },
+            axis: {
+                y: {
+                    label: 'Hours'
+                },
+                x: {
+                    label: 'Time',
+                    type: 'timeseries',
+                    tick: {
+                        count: 12,
+                        format: function (x) { return (x.getMonth()+1) + '/' + x.getFullYear().toString().substring(2); }
+                        //format: '%Y' // format string is also available for timeseries data
+                    }
+                }
+            },
+            subchart: {
+                show: true
+            },
+            zoom: {
+                enabled: true
             }
         });
     }.bind(this));
