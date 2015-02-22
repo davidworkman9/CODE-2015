@@ -21,6 +21,19 @@ Template.industryGraph.helpers({
     }
 });
 
+// Supposed to start links in the proper apps on mobile devices.
+// Template.industryGraph.events({
+//     "click .external-link" : function(e) {
+//         e.preventDefault();
+//         if(Meteor.isCordova){
+//             if(Platform.isAndroid())
+//                 navigator.app.loadUrl(e.target.href, {openExrernal: true})
+//             else if(Platform.isIOS())
+//                 window.open(e.target.href, '_system')
+//         }
+//     }
+// })
+
 Template.industryGraph.rendered = function () {
     var shown = false;
 

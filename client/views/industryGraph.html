@@ -65,16 +65,16 @@
                         </div>
                     </div>
                     <div>
-                        <div class="disable-owl-swipe">
+                        <div class="">
                             <p><strong>If you would like to find more information on {{lfseIndustry}}, please use the following link(s).</strong></p>
                             <div>
                               {{#ionList}}
-                                  {{#ionItem href=industry.link1 buttonRight=true avatar=true class="item-icon-right"}}
+                                  {{#ionItem href=industry.link1 buttonRight=true avatar=true class="item-icon-right external-link"}}
                                       {{industry.link1}}
                                       {{> ionIcon icon="ios-arrow-forward" class="positive"}}
                                   {{/ionItem}}
                                   {{#if industry.link2}}
-                                      {{#ionItem href=industry.link2 buttonRight=true avatar=true class="item-icon-right"}}
+                                      {{#ionItem href=industry.link2 buttonRight=true avatar=true class="item-icon-right external-link"}}
                                           {{industry.link2}}
                                           {{> ionIcon icon="ios-arrow-forward" class="positive"}}
                                       {{/ionItem}}
