@@ -96,10 +96,10 @@ Meteor.startup(function () {
            ++i;
        });
        if (!Industries.findOne({industry: obj.industry})){
-            Industries.insert({industry: obj.industry, parentId: obj.industry});
+            Industries.insert({industry: obj.industry, parentId: obj.industry, industry_lc: obj.industry.toLowerCase()});
             parentId = obj.industry
         }
-        Industries.insert({industry: obj.sector, parentId: parentId });
+        Industries.insert({industry: obj.sector, parentId: parentId, industry_lc: obj.sector.toLowerCase() });
     });
 
     // Job Tenure by Industry
@@ -146,7 +146,7 @@ Meteor.startup(function () {
            ++i;
        });
         
-        Industries.update({industry: obj.industry}, {$set: {link1: obj.link1, link2: obj.link2}})
+        Industries.update({industry_lc: obj.industry.toLowerCase()}, {$set: {link1: obj.link1, link2: obj.link2}})
     });
 
     console.log('Done Parsing Data');
