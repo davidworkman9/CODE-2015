@@ -30,6 +30,7 @@ Template.industryGraph.rendered = function () {
     }.bind(this));
 
     this.autorun(function () {
+        var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
         var data = Blaze.getData().lfd;
         var industry = Router.current().params.parentId;
         if (!(this.subIndustries.ready() && this.subData.ready()))
@@ -62,7 +63,7 @@ Template.industryGraph.rendered = function () {
                     type: 'timeseries',
                     tick: {
                         count: 12,
-                        format: function (x) { return (x.getMonth()+1) + '/' + x.getFullYear().toString().substring(2); }
+                        format: function (x) { return monthNames[x.getMonth()] + '-' + x.getFullYear().toString().substring(2); }
                         //format: '%Y' // format string is also available for timeseries data
                     }
                 }
@@ -102,7 +103,7 @@ Template.industryGraph.rendered = function () {
                     type: 'timeseries',
                     tick: {
                         count: 12,
-                        format: function (x) { return (x.getMonth()+1) + '/' + x.getFullYear().toString().substring(2); }
+                        format: function (x) { return monthNames[x.getMonth()] + '-' + x.getFullYear().toString().substring(2); }
                         //format: '%Y' // format string is also available for timeseries data
                     }
                 }
