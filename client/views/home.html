@@ -1,14 +1,19 @@
 <template name="home">
     {{#contentFor "headerTitle"}}
-        <h1 class="title">Job Nation</h1>
+        <h1 class="title">Open Career Hunt</h1>
     {{/contentFor}}
 
     {{#ionView}}
         {{#ionContent}}
             <div class="padding">
-                <p>Helping youth make tough job decisions with cold hard open fresh straight from the government data.</p>
-                <a href="{{pathFor 'industrySelector'}}" class="button">Get Started Now!</a>
+                <p class="text-center">Helping youth make career decisions with data from the government's open data system.</p>
+                <img width="100%" src="/home_image.jpg" alt="Find your career today!"/>
+                <small class="pull-right">
+                    Image courtesy of <a href="view_photog.php?photogid=4096">stockimages</a> at
+                    <a href="http://www.FreeDigitalPhotos.net">FreeDigitalPhotos.net</a>
+                </small>
             </div>
+            <a href="{{pathFor 'industrySelector'}}" class="button button-full button-positive">Get Started Now!</a>
         {{/ionContent}}
     {{/ionView}}
 </template>

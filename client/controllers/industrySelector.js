@@ -30,14 +30,23 @@ Template.industrySelector.rendered = function () {
             }
         }
     );
+
+    $('#search-button').click(function (e) {
+        e.preventDefault();
+        $('#industry-filter').focus();
+        $('.ionic-scroll>.content').scrollTop(0);
+    });
 };
 
 Template.industrySelector.events({
-    'change #industry': function (e) {
-        Router.go('industryGraph', {
-            industry: $(e.target).val()
-        });
-    },
+    // todo: this doesn't work, put in a issue on meteoric:ionic
+    //'click #search-button': function (e) {
+    //    e.preventDefault();
+    //    console.log('clicked this')
+    //    $('#industry-filter').focus();
+    //
+    //    $('.ionic-scroll>.content').scrollTop(0);
+    //},
     'input #industry-filter': function (e, tmpl) {
         if (tmpl.waitInput)
             clearTimeout(tmpl.waitInput);

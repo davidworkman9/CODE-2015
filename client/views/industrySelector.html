@@ -3,12 +3,19 @@
         <h1 class="title">Pick An Industry</h1>
     {{/contentFor}}
 
+    {{#contentFor "headerButtonRight"}}
+        <span id="search-button" class="button button-clear">
+            {{> ionIcon icon="search" }}
+        </span>
+    {{/contentFor}}
+
     {{#ionView}}
         {{#ionContent}}
             {{#ionList}}
-                {{#ionItem class="item-icon-right"}}
-                    <input type="search" placeholder="Search..." id="industry-filter">
-                    {{> ionIcon icon="search" class="positive"}}
+                {{#ionItem}}
+                    <div class="item-input-wrapper">
+                        <input type="search" placeholder="Search..." id="industry-filter">
+                    </div>
                 {{/ionItem}}
                 {{#each industries}}
                     {{#ionItem path="industryGraph" buttonRight=true avatar=true class="item-icon-right"}}
