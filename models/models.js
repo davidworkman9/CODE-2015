@@ -1,4 +1,5 @@
 LabourForceSurveyEstimates = new Meteor.Collection('LabourForceSurveyEstimates');
+TenureByIndustry = new Meteor.Collection('TenureByIndustry');
 
 Industries = new Meteor.Collection('Industries');
 

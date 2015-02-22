@@ -39,8 +39,9 @@
 
 
 Meteor.startup(function () {
-    // LabourForceSurveyEstimates.remove({});
-    // Industries.remove({});
+    TenureByIndustry.remove({});
+    LabourForceSurveyEstimates.remove({});
+    Industries.remove({});
     if (LabourForceSurveyEstimates.find().count() > 0)
         return;
     var Future = Npm.require('fibers/future'),
@@ -95,6 +96,31 @@ Meteor.startup(function () {
         }
         Industries.insert({industry: obj.sector, parentId: parentId });
     });
+
+    // Job Tenure by Industry
+    // var fut = new Future(),
+    //     txt = Assets.getText('tenure by industry.csv');
+
+    // csv.parse(txt, function (err, data) {
+    //    var headers = data.shift();
+    //    fut.return({ headers: headers, data: data });
+    // });
+    // console.log('tenure by industry');
+    // var d = fut.wait();
+    // console.time('processing time');
+    // _.each(d.data, function (value) {
+    //    var obj = {};
+    //    var i = 0;
+    //    _.each(d.headers, function (h) {
+    //        obj[h] = value[i];
+    //        ++i;
+    //    });
+    //     var datePieces = obj.Ref_Date.split('/');
+    //     obj.Ref_Date = new Date(datePieces[0], datePieces[1], obj);
+    //     obj.JOBTENURE = obj.JOBTENURE.replace(/\(x 1,000\)$/, '').trim().toLowerCase();
+    //     obj.INDUSTRY = obj.INDUSTRY.toLowerCase();
+    //     TenureByIndustry.insert(obj);
+    // });
 
     console.log('done parsing data');
 });
