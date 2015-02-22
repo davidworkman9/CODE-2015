@@ -153,5 +153,47 @@ Template.industryGraph.rendered = function () {
             }
         });
         chart.transform("spline");
+
+        var data = Blaze.getData().tenure;
+        if (!(this.subIndustries.ready() && this.subData.ready()))
+            return;
+
+        var columns = [
+            ['x'].concat(_.uniq(_.map(data.fetch(), function (x) {
+                return x.Ref_Date;
+            }), function (x) { return x.getTime(); }))
+        ];
+        
+        columns.push(['Data'].concat(_.map(data.fetch(), function (x) { return (Number(x.Value) / 12 );  })));
+        console.log(columns);
+        chart = c3.generate({
+            bindto: '#chart4',
+            data: {
+                x: 'x',
+                columns: columns
+            },
+            axis: {
+                y: {
+                    label: 'Years'
+                },
+                x: {
+                    label: 'Time',
+                    type: 'timeseries',
+                    tick: {
+                        count: 12,
+                        format: function (x) { return monthNames[x.getMonth()] + '-' + x.getFullYear().toString().substring(2); }
+                        //format: '%Y' // format string is also available for timeseries data
+                    }
+                }
+            },
+            subchart: {
+                show: true
+            },
+            zoom: {
+                enabled: true
+            }
+        });
+        chart.transform("spline");
+
     }.bind(this));
 };

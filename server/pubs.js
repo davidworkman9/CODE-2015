@@ -18,15 +18,24 @@ Meteor.publish('industry-data', function (industry) {
         LabourForceSurveyEstimates.find({
             NORTH_lc: industry.toLowerCase(),
             Ref_Date: {
-                $lte: new Date(2012, 1, 1),
-                $gt: new Date(2007, 1, 1)
+                $lte: new Date(),
+                $gt: moment().subtract(5,'years')._d
             }
         }),
         ActualHoursWorked.find({
             industry_lc: industry.toLowerCase(),
             Ref_Date: {
-                $lte: new Date(2012, 1, 1),
-                $gt: new Date(2007, 1, 1)
+                $lte: new Date(),
+                $gt: moment().subtract(5,'years')._d
+            }
+        }),
+        TenureByIndustry.find({
+            GEOGRAPHY: 'Canada',
+            JOBTENURE: 'average tenure (months)',
+            INDUSTRY: industry.toLowerCase(),
+            Ref_Date: {
+                $lte: new Date(),
+                $gt: moment().subtract(5,'years')._d
             }
         })
     ];
