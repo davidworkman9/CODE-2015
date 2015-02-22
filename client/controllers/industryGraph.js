@@ -17,6 +17,15 @@ Template.industryGraph.helpers({
 
 Template.industryGraph.rendered = function () {
     var shown = false;
+
+    this.$('.owl-carousel').owlCarousel({
+        singleItem: true
+    });
+    this.$(".disable-owl-swipe").on("touchstart mousedown", function(e) {
+        // Prevent carousel swipe
+        e.stopPropagation();
+    });
+
     this.autorun(function () {
         if (this.subIndustries.ready() && this.subData.ready()) {
             IonLoading.hide();

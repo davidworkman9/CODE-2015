@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="617d4042-4027-43ba-ae4f-c98a3ab53d2e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/AjaxLoader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/grabbing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/owlCarousel/owl.carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/owlCarousel/owl.carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/owlCarousel/owl.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/owlCarousel/owl.transitions.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home.html" afterPath="$PROJECT_DIR$/client/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/industrySelector.html" afterPath="$PROJECT_DIR$/client/views/industrySelector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/controllers/industrySelector.js" afterPath="$PROJECT_DIR$/client/controllers/industrySelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/layout.html" afterPath="$PROJECT_DIR$/client/views/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/industryGraph.html" afterPath="$PROJECT_DIR$/client/views/industryGraph.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/controllers/industryGraph.js" afterPath="$PROJECT_DIR$/client/controllers/industryGraph.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/main.scss" afterPath="$PROJECT_DIR$/client/stylesheets/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,38 +39,18 @@
       <file leaf-file-name="industrySelector.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/industrySelector.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="510">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="510">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="industryGraph.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="industryGraph.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/views/industryGraph.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="405">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/views/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35211268" vertical-offset="0" max-vertical-offset="426">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="240">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.31690142" vertical-offset="0" max-vertical-offset="1095">
+              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -74,18 +59,8 @@
       <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/stylesheets/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="315">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="industrySelector.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/controllers/industrySelector.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1050">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -94,26 +69,19 @@
       <file leaf-file-name="industryGraph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/controllers/industryGraph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2445">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-              <folding>
-                <marker date="1424621783000" expanded="true" signature="1594:2616" placeholder="{...}" />
-                <marker date="1424621783000" expanded="true" signature="2688:3648" placeholder="{...}" />
-                <marker date="1424621783000" expanded="true" signature="2706:2802" placeholder="{&quot;x&quot;: 'x'...}" />
-                <marker date="1424621783000" expanded="true" signature="3297:3466" placeholder="{&quot;label&quot;: 'Time'...}" />
-                <marker date="1424621783000" expanded="true" signature="3359:3440" placeholder="{&quot;count&quot;: 12...}" />
-                <marker date="1424621783000" expanded="true" signature="3497:3524" placeholder="{&quot;show&quot;: true...}" />
-                <marker date="1424621783000" expanded="true" signature="3862:4065" placeholder="[...]" />
-                <marker date="1424621783000" expanded="true" signature="3958:4044" placeholder="{...}" />
-                <marker date="1424621783000" expanded="true" signature="4187:4974" placeholder="{&quot;bindto&quot;: '#chart2'...}" />
-                <marker date="1424621783000" expanded="true" signature="4236:4303" placeholder="{&quot;x&quot;: 'x'...}" />
-                <marker date="1424621783000" expanded="true" signature="4328:4836" placeholder="{...}" />
-                <marker date="1424621783000" expanded="true" signature="4350:4402" placeholder="{&quot;label&quot;: 'Hours'...}" />
-                <marker date="1424621783000" expanded="true" signature="4425:4825" placeholder="{&quot;label&quot;: 'Time'...}" />
-                <marker date="1424621783000" expanded="true" signature="4535:4811" placeholder="{&quot;count&quot;: 12...}" />
-                <marker date="1424621783000" expanded="true" signature="4869:4902" placeholder="{&quot;show&quot;: true...}" />
-                <marker date="1424621783000" expanded="true" signature="4927:4966" placeholder="{&quot;enabled&quot;: true...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="3210">
+              <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="owl.carousel.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/lib/owlCarousel/owl.carousel.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,7 +100,6 @@
         <option value="$PROJECT_DIR$/code-2015.html" />
         <option value="$PROJECT_DIR$/models/models.js" />
         <option value="$PROJECT_DIR$/server/main.js" />
-        <option value="$PROJECT_DIR$/client/views/industryGraph.html" />
         <option value="$PROJECT_DIR$/code-2015.js" />
         <option value="$PROJECT_DIR$/client/views/main.html" />
         <option value="$PROJECT_DIR$/client/controllers/main.js" />
@@ -140,12 +107,13 @@
         <option value="$PROJECT_DIR$/mup.json" />
         <option value="$PROJECT_DIR$/server/pubs.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/client/controllers/industryGraph.js" />
         <option value="$PROJECT_DIR$/client/controllers/industrySelector.js" />
         <option value="$PROJECT_DIR$/client/views/industrySelector.html" />
         <option value="$PROJECT_DIR$/client/views/layout.html" />
-        <option value="$PROJECT_DIR$/client/stylesheets/main.scss" />
+        <option value="$PROJECT_DIR$/client/controllers/industryGraph.js" />
         <option value="$PROJECT_DIR$/client/views/home.html" />
+        <option value="$PROJECT_DIR$/client/stylesheets/main.scss" />
+        <option value="$PROJECT_DIR$/client/views/industryGraph.html" />
       </list>
     </option>
   </component>
@@ -209,21 +177,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code-2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code-2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -245,6 +203,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -262,6 +234,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/client/lib/owlCarousel" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/packages/accounts-entry" />
     </key>
@@ -325,10 +299,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="629" y="67" width="1042" height="959" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4483146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4483146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -388,24 +362,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1860">
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <marker date="1424621783000" expanded="true" signature="1594:2616" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2688:3648" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2706:2802" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="3297:3466" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="3359:3440" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="3497:3524" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="3862:4065" placeholder="[...]" />
-            <marker date="1424621783000" expanded="true" signature="3958:4044" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4187:4974" placeholder="{&quot;bindto&quot;: '#chart2'...}" />
-            <marker date="1424621783000" expanded="true" signature="4236:4303" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="4328:4836" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4350:4402" placeholder="{&quot;label&quot;: 'Hours'...}" />
-            <marker date="1424621783000" expanded="true" signature="4425:4825" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="4535:4811" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="4869:4902" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="4927:4966" placeholder="{&quot;enabled&quot;: true...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -430,8 +387,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2355">
           <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
           <folding>
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -504,8 +461,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="792">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="11" selection-end-column="28" />
           <folding>
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -521,24 +478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="720">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <marker date="1424621783000" expanded="true" signature="1594:2616" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2688:3648" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2706:2802" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="3297:3466" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="3359:3440" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="3497:3524" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="3862:4065" placeholder="[...]" />
-            <marker date="1424621783000" expanded="true" signature="3958:4044" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4187:4974" placeholder="{&quot;bindto&quot;: '#chart2'...}" />
-            <marker date="1424621783000" expanded="true" signature="4236:4303" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="4328:4836" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4350:4402" placeholder="{&quot;label&quot;: 'Hours'...}" />
-            <marker date="1424621783000" expanded="true" signature="4425:4825" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="4535:4811" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="4869:4902" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="4927:4966" placeholder="{&quot;enabled&quot;: true...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -562,8 +502,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="212" max-vertical-offset="720">
           <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding>
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -572,24 +512,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="555">
           <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding>
-            <marker date="1424621783000" expanded="true" signature="1594:2616" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2688:3648" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2706:2802" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="3297:3466" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="3359:3440" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="3497:3524" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="3862:4065" placeholder="[...]" />
-            <marker date="1424621783000" expanded="true" signature="3958:4044" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4187:4974" placeholder="{&quot;bindto&quot;: '#chart2'...}" />
-            <marker date="1424621783000" expanded="true" signature="4236:4303" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="4328:4836" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4350:4402" placeholder="{&quot;label&quot;: 'Hours'...}" />
-            <marker date="1424621783000" expanded="true" signature="4425:4825" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="4535:4811" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="4869:4902" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="4927:4966" placeholder="{&quot;enabled&quot;: true...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -712,81 +635,72 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="2430">
           <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
           <folding>
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1424621783000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/controllers/industryGraph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2445">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <marker date="1424621783000" expanded="true" signature="1594:2616" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2688:3648" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="2706:2802" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="3297:3466" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="3359:3440" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="3497:3524" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="3862:4065" placeholder="[...]" />
-            <marker date="1424621783000" expanded="true" signature="3958:4044" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4187:4974" placeholder="{&quot;bindto&quot;: '#chart2'...}" />
-            <marker date="1424621783000" expanded="true" signature="4236:4303" placeholder="{&quot;x&quot;: 'x'...}" />
-            <marker date="1424621783000" expanded="true" signature="4328:4836" placeholder="{...}" />
-            <marker date="1424621783000" expanded="true" signature="4350:4402" placeholder="{&quot;label&quot;: 'Hours'...}" />
-            <marker date="1424621783000" expanded="true" signature="4425:4825" placeholder="{&quot;label&quot;: 'Time'...}" />
-            <marker date="1424621783000" expanded="true" signature="4535:4811" placeholder="{&quot;count&quot;: 12...}" />
-            <marker date="1424621783000" expanded="true" signature="4869:4902" placeholder="{&quot;show&quot;: true...}" />
-            <marker date="1424621783000" expanded="true" signature="4927:4966" placeholder="{&quot;enabled&quot;: true...}" />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424628308000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/controllers/industrySelector.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1050">
+        <state vertical-scroll-proportion="0.76222223" vertical-offset="287" max-vertical-offset="1050">
           <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/industryGraph.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="405">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/industrySelector.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="510">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="240">
+        <state vertical-scroll-proportion="0.1056338" vertical-offset="0" max-vertical-offset="426">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/stylesheets/main.scss">
+    <entry file="file://$PROJECT_DIR$/client/lib/owlCarousel/owl.carousel.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="315">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35211268" vertical-offset="0" max-vertical-offset="426">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.52816904" vertical-offset="0" max-vertical-offset="426">
+          <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/controllers/industryGraph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="3210">
+          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/industrySelector.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="510">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/industryGraph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31690142" vertical-offset="0" max-vertical-offset="1095">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
           <folding />
         </state>
       </provider>

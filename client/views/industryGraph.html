@@ -3,21 +3,65 @@
         <h1 class="title">{{industry}}</h1>
     {{/contentFor}}
 
-    {{#contentFor "headerButtonLeft"}}
-        <a class="button button-clear" href="{{pathFor 'industrySelector'}}">{{> ionIcon icon="ios-arrow-left"}}</a>
-    {{/contentFor}}
+    {{#unless isAndroid}}
+        {{#contentFor "headerButtonLeft"}}
+            <a class="button button-clear" href="{{pathFor 'industrySelector'}}">{{> ionIcon icon="ios-arrow-left"}}</a>
+        {{/contentFor}}
+    {{/unless}}
 
     {{#ionView}}
         {{#ionContent}}
             <div class="padding">
-                <p><strong>Employment rates for {{industry}}.</strong></p>
-                <div id="chart"></div>
-                <p><strong>Unemployment rates for {{industry}}.</strong></p>
-                <div id="chart2"></div>
-                <p><strong>Average work hours per week for am employee in {{industry}}.</strong></p>
-                <div id="chart3"></div>
-                <p><strong>Average tenure in years at a job in {{industry}}.</strong></p>
-                <div id="chart4"></div>
+                <div class="owl-carousel">
+                    <div>
+                        <div class="disable-owl-swipe">
+                            <p><strong>Employment rates for {{industry}}.</strong></p>
+                            <div id="chart"></div>
+                        </div>
+                        <div class="padding-vertical">
+                            <button class="button button-clear button-full">
+                                Swipe Here
+                                {{> ionIcon icon="chevron-right" class="pull-right padding-right"}}
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="disable-owl-swipe">
+                            <p><strong>Unemployment rates for {{industry}}.</strong></p>
+                            <div id="chart2"></div>
+                        </div>
+                        <div class="padding-vertical">
+                            <button class="button button-clear button-full">
+                                {{> ionIcon icon="chevron-left" class="pull-left padding-left"}}
+                                Swipe Here
+                                {{> ionIcon icon="chevron-right" class="pull-right padding-right"}}
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="disable-owl-swipe">
+                            <p><strong>Average work hours per week for am employee in {{industry}}.</strong></p>
+                            <div id="chart3"></div>
+                        </div>
+                        <div class="padding-vertical">
+                            <button class="button button-clear button-full">
+                                {{> ionIcon icon="chevron-left" class="pull-left padding-left"}}
+                                Swipe Here
+                                {{> ionIcon icon="chevron-right" class="pull-right padding-right"}}
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="disable-owl-swipe">
+                            <p><strong>Average tenure in years at a job in {{industry}}.</strong></p>
+                            <div id="chart4"></div>
+                        </div>
+                        <button class="button button-clear button-full">
+                            {{> ionIcon icon="chevron-left" class="pull-left padding-left"}}
+                            Swipe Here
+                        </button>
+                    </div>
+                </div>
             </div>
         {{/ionContent}}
     {{/ionView}}
