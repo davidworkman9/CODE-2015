@@ -1,6 +1,7 @@
 var downloading = false;
 Template.industrySelector.created = function () {
     this.filter = new Blaze.ReactiveVar();
+    downloading = false;
     this.autorun(function () {
         if (!downloading)
             IonLoading.show();
@@ -10,8 +11,11 @@ Template.industrySelector.created = function () {
             this.filter.get(),
             function () {
                 downloading = false;
-                IonLoading.hide();
-        });
+                Tracker.afterFlush(function () {
+                    IonLoading.hide();
+                });
+            }
+        );
     }.bind(this));
     Session.set('numDocs', 50);
 };
